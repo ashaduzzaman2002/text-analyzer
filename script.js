@@ -1,12 +1,15 @@
-const text = document.getElementById('text')
+const textInput = document.getElementById('textInput')
 const analyzeBtn = document.getElementById('analyzeBtn')
 const result = document.getElementById('result')
 const clearBtn = document.getElementById('clearBtn')
+const uppercase = document.getElementById('uppercase')
+const lowercase = document.getElementById('lowercase')
+
 
 // Word counter Function
 const wordCounter = () => {
     totalWord = 0
-    words = text.value.split(' ')
+    words = textInput.value.split(' ')
     for (word of words){
         totalWord++
     }
@@ -18,7 +21,7 @@ const wordCounter = () => {
 
 const leterCounter = () => {
     totalLeter = 0
-    leters = text.value
+    leters = textInput.value
     for (leter of leters){
         if(leter !== ' '){
             totalLeter++
@@ -28,16 +31,56 @@ const leterCounter = () => {
     return totalLeter
 }
 
-//Text Analyze function
+// Text Analyze function
 
 analyzeBtn.onclick = () => {
-    result.innerHTML = `<p>Total number of words: ${wordCounter()}</p>
-                        <p>Total number of charectors: ${leterCounter()}</p>`
+    result.innerHTML = `
+  <div>
+    <h2>${leterCounter()}</h2>
+    <h4>Character</h4>
+  </div>
+
+  <div>
+    <h2>${wordCounter()}</h2>
+    <h4>Word</h4>
+  </div>
+
+  <div>
+    <h2>0</h2>
+    <h4>Sentence</h4>
+  </div>
+
+  <div>
+    <h2>0</h2>
+    <h4>Digit</h4>
+  </div>
+
+  <div>
+    <h2>0</h2>
+    <h4>vowel</h4>
+  </div>
+
+  <div>
+    <h2>0</h2>
+    <h4>consonant</h4>
+  </div>`
 }
 
 // Clear function
 clearBtn.onclick = () => {
-    text.value = ''
+    textInput.value = ''
     result.innerHTML = ''
+}
+
+// Upper case function
+
+uppercase.onclick = () => {
+    let uppercase = textInput.value.toUpperCase()
+    textInput.value = uppercase
+}
+
+lowercase.onclick = () => {
+    let lowercase = textInput.value.toLowerCase()
+    textInput.value = lowercase
 }
 
