@@ -109,7 +109,7 @@ textarea::-webkit-scrollbar {
     text-align: center;
 }
 
-.result-div div{
+.resultCard{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,12 +121,12 @@ textarea::-webkit-scrollbar {
     margin-bottom: 2rem;
 }
 
-.result-div div h2{
+.resultCard h2{
     font-size: 3rem;
     margin-bottom: 2px;
 }
 
-.result-div div h4{
+.resultCard h4{
     color: white;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -139,12 +139,48 @@ footer{
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    margin-top: 30px;
     margin-bottom: 30px;
 }
 
+/* Loaing spiner css */
 
-
+#lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+  }
+  #lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  #lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  #lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  #lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
 /* Responsive style */
 
 @media only screen and (max-width: 1250px) {
