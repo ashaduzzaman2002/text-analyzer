@@ -32,6 +32,10 @@ h1{
 body{
     background: #272639;
     color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 main{
@@ -128,6 +132,15 @@ textarea::-webkit-scrollbar {
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 10px;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 
