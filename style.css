@@ -28,6 +28,9 @@ h1{
     font-size: 1.8rem;
 }
 
+button:focus {
+  outline: none;
+}
 
 body{
     background: #272639;
